@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cogit.im</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* "Dusk & Vellum" palette */
+            --bg-color: #0A0E1B; /* Deep Navy */
+            --text-color: #F8F7F4; /* Off-White / Vellum */
+            --accent-color: #FF8A00; /* Luminous Ember */
+            --meta-text-color: #a0a0a0; /* Softer Gray */
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        #experiment-display {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.5;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease-in-out;
+            opacity: 0; /* Start hidden */
+        }
+        
+        #cogitate-button {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--meta-text-color);
+            background-color: transparent;
+            border: 2px solid var(--meta-text-color);
+            border-radius: 50px;
+            padding: 1rem 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        #cogitate-button:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px hsla(32, 100%, 50%, 0.2);
+        }
+
+        .logo {
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--meta-text-color);
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="https://unearth.im" target="_blank" class="logo">cogit<span>.im</span></a>
+
+    <div class="container" id="container">
+        <div class="content-wrapper" id="content-wrapper">
+            <p id="experiment-display"></p>
+            <button id="cogitate-button">Cogitate</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const experimentDisplay = document.getElementById('experiment-display');
+            const cogitateButton = document.getElementById('cogitate-button');
+
+            const thoughtExperiments = [
+                "If a ship has all its parts replaced, is it still the same ship?",
+                "If a machine destroys you and creates an exact copy elsewhere with your memories, is that copy still you?",
+                "If you were vaporized and a perfect, accidental copy formed in a swamp, would that 'Swampman' be you?",
+                "To reach a destination, you must first get halfway there, but before that, you must get halfway to halfway. How can you ever arrive?",
+                "If a tree falls in a forest and no one is around to hear it, does it make a sound?",
+                "If you went back in time and prevented your grandfather from meeting your grandmother, how could you have been born to do so?",
+                "If a time traveler gives Beethoven a music book of his own symphonies, where did the music originally come from?",
+                "Is it more likely that the entire universe came into being, or that your brain, with all its memories, spontaneously formed in a void?",
+                "If you could choose, would you risk being born into a random life, knowing it could be one of great suffering or great joy?",
+                "If there is an all-powerful and all-good entity, why does evil exist?",
+                "Would you pull a lever to divert a runaway trolley from hitting five people, if it meant hitting one person on the other track?",
+                "If you are shipwrecked and another person clings to the only plank that can save you, is it wrong to push them off?",
+                "If you were to design a society without knowing what your own position in it would be, what kind of society would you create?",
+                "Are you obligated to ruin your expensive shoes to save a child drowning in a shallow pond?",
+                "Is it permissible to torture one person to save a thousand others from a bomb?",
+                "Should one person be allowed to experience immense happiness if it comes at the cost of a tiny amount of suffering from everyone else?",
+                "Is a world with billions of people living barely worthwhile lives better than a world with a few people living in paradise?",
+                "If a drunk driver swerves and narrowly misses a child, is their action less wrong than if they had hit them?",
+                "Should you cooperate with a partner for a small reward, knowing they might betray you for a large one?",
+                "Is an act morally good because a divine being commands it, or does a divine being command it because it is morally good?",
+                "Should a tolerant society tolerate intolerance?",
+                "Is it morally wrong to replace a happy being with another, equally happy being?",
+                "If you woke up attached to an unconscious, famous violinist who needs your kidneys to survive for nine months, are you obligated to stay?",
+                "Is it right for a city's perfect happiness to depend on the perpetual misery of a single child?",
+                "If happiness is just a fleeting state we always return to, what is the point of pursuing it?",
+                "If a scientist knows everything about color but has never seen it, does she learn anything new when she sees the color red?",
+                "If you had lived your entire life seeing only shadows on a wall, would you believe someone who told you about the world outside?",
+                "How can you be certain that you are not just a brain in a vat, experiencing a simulated reality?",
+                "If a person who doesn't know Chinese uses a rulebook to give perfect answers, do they truly understand the language?",
+                "If you could plug into a machine that would give you any experience you desired, would you do it for the rest of your life?",
+                "Could a being exist that looks and acts exactly like a human but has no inner conscious experience?",
+                "If you and I see 'red' differently but both call it 'red,' how would we ever know?",
+                "Having only ever seen white swans, are you justified in believing that all swans are white?",
+                "If you believe a false thing that coincidentally leads to a true conclusion, do you actually know it?",
+                "A super-predictor offers two boxes. One has $1,000. The other has $1M if they predicted you'd only take that box. Do you take one box or two?",
+                "Why does it feel like *something* to be you? Why isn't it all just dark inside?",
+                "Could a human ever truly know what it is like to be a bat, experiencing the world through echolocation?",
+                "Can you describe the experience of tasting a strawberry to someone who has never had one?",
+                "If you remove one grain of sand at a time from a heap, at what point is it no longer a heap?",
+                "Sleeping Beauty is put to sleep. A coin is tossed. If heads, she's woken once. If tails, she's woken twice (with memory erased in between). When she wakes, what should be her degree of belief that the coin was heads?",
+                "If the universe is teeming with life, where is everybody?",
+                "Is it more probable that we are living in a 'base reality' or in one of a vast number of computer simulations?",
+                "Can you use statistics to predict that you are more likely to be living in the middle of humanity's timeline than at its very beginning?",
+                "If we create a superintelligent AI and tell it to make as many paperclips as possible, would it destroy humanity to achieve its goal?",
+                "Is it more terrifying to think that we are the only intelligent life in the universe, or that we are not?",
+                "What is the fairest way to distribute resources in a society?",
+                "If you had a ring that made you invisible, would you still act morally?",
+                "In a library containing every possible book, does the existence of one true book mean anything among infinite falsehoods?",
+                "Why are diamonds, which are non-essential, more valuable than water, which is essential for life?",
+                "Three shipwrecked sailors are on a raft. One must be eaten for the others to survive. How do they choose?"
+            ];
+
+            let lastExperimentIndex = -1;
+
+            function displayNewExperiment() {
+                experimentDisplay.style.opacity = '0';
+                
+                setTimeout(() => {
+                    let newIndex;
+                    do {
+                        newIndex = Math.floor(Math.random() * thoughtExperiments.length);
+                    } while (newIndex === lastExperimentIndex);
+                    
+                    lastExperimentIndex = newIndex;
+                    experimentDisplay.textContent = thoughtExperiments[newIndex];
+                    experimentDisplay.style.opacity = '1';
+                }, 1000); // Match CSS transition
+            }
+
+            // Display the first experiment on load
+            displayNewExperiment();
+
+            // Set up the button
+            cogitateButton.addEventListener('click', displayNewExperiment);
+        });
+    </script>
+</body>
+</html>
+
