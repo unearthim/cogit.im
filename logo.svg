@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="22" viewBox="0 0 85 22">
+  <!--
+    Font: Inter, Weight: 600
+    cogit color: #a0a0a0 (var(--meta-text-color))
+    .im color: #FF8A00 (var(--accent-color))
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600');
+      .logo-text { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.5px; }
+    </style>
+  </defs>
+  <text x="0" y="16" class="logo-text" fill="#a0a0a0">cogit<tspan fill="#FF8A00">.im</tspan></text>
+</svg>

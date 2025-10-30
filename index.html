@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. Core Page Information -->
     <title>cogit.im</title>
+    <meta name="description" content="A simple, interactive page to ponder classic and modern thought experiments. Click 'Cogitate' to explore a new philosophical question.">
+
+    <!-- 2. Open Graph (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="cogit.im">
+    <meta property="og:description" content="A simple, interactive page to ponder classic and modern thought experiments. Click 'Cogitate' to explore a new philosophical question.">
+    <meta property="og:image" content="https://cogit.im/og-image.png">
+    <meta property="og:url" content="https://cogit.im/">
+    <meta property="og:type" content="website">
+
+    <!-- 3. Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="cogit.im">
+    <meta name="twitter:description" content="A simple, interactive page to ponder classic and modern thought experiments. Click 'Cogitate' to explore a new philosophical question.">
+    <meta name="twitter:image" content="https://cogit.im/og-image.png">
+
+    <!-- 4. Indexing Control -->
+    <meta name="robots" content="index, follow">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
     <style>
         :root {
             /* "Dusk & Vellum" palette */
@@ -80,23 +103,87 @@
             position: absolute;
             top: 25px;
             left: 30px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--meta-text-color);
-            letter-spacing: 0.5px;
-            text-decoration: none;
+            /* The SVG will inherit dimensions if needed, or you can set them here */
+        }
+
+        .logo svg {
+            width: 85px;
+            height: 22px;
         }
         
-        .logo span {
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none; /* Allows clicks to pass through when hidden */
+        }
+
+        .modal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background-color: var(--bg-color);
+            margin: auto;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: left;
+            color: var(--text-color);
+            font-family: 'Lora', serif;
+        }
+
+        .modal-content h2 {
+            font-family: 'Inter', sans-serif;
             color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .modal-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .modal-footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--meta-text-color);
+        }
+
+        .modal-footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
         }
 
     </style>
 </head>
 <body>
 
-    <a href="https://unearth.im" target="_blank" class="logo">cogit<span>.im</span></a>
+    <a href="https://unearth.im" target="_blank" class="logo" aria-label="cogit.im logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 22" role="img">
+            <style>.logo-text { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.5px; }</style>
+            <text x="0" y="16" class="logo-text" fill="#a0a0a0">cogit<tspan fill="#FF8A00">.im</tspan></text>
+        </svg>
+    </a>
 
     <div class="container" id="container">
         <div class="content-wrapper" id="content-wrapper">
@@ -105,10 +192,46 @@
         </div>
     </div>
 
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <h2>What is this about?</h2>
+            <p>Cogit.im is a digital space dedicated to the exploration of thought experiments. It's designed to provoke contemplation and encourage critical thinking through classic and modern philosophical dilemmas.</p>
+            <p>Each click presents a new question, inviting you to pause, ponder, and perhaps even discuss.</p>
+            <p class="modal-footer">A digital artifact unearthed and preserved by <a href="https://unearth.im" target="_blank" rel="noopener noreferrer">unearth.im</a></p>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const experimentDisplay = document.getElementById('experiment-display');
             const cogitateButton = document.getElementById('cogitate-button');
+            const logoLink = document.querySelector('.logo'); // Select the logo link
+            const aboutModal = document.getElementById('aboutModal');
+            const modalContent = aboutModal.querySelector('.modal-content');
+
+            // Function to show the modal
+            function showModal() {
+                aboutModal.classList.add('show');
+            }
+
+            // Function to hide the modal
+            function hideModal() {
+                aboutModal.classList.remove('show');
+            }
+
+            // Event listener for logo click to show modal
+            logoLink.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent the default link behavior
+                showModal();
+            });
+
+            // Event listener to hide modal when clicking outside content
+            aboutModal.addEventListener('click', (event) => {
+                if (!modalContent.contains(event.target)) {
+                    hideModal();
+                }
+            });
 
             const thoughtExperiments = [
                 "If a ship has all its parts replaced, is it still the same ship?",
@@ -147,7 +270,7 @@
                 "If you believe a false thing that coincidentally leads to a true conclusion, do you actually know it?",
                 "A super-predictor offers two boxes. One has $1,000. The other has $1M if they predicted you'd only take that box. Do you take one box or two?",
                 "Why does it feel like *something* to be you? Why isn't it all just dark inside?",
-                "Could a human ever truly know what it is like to be a bat, experiencing the world through echolocation?",
+                "Could a human ever truly know what it is like to be a <em>bat</em>, experiencing the world through echolocation?",
                 "Can you describe the experience of tasting a strawberry to someone who has never had one?",
                 "If you remove one grain of sand at a time from a heap, at what point is it no longer a heap?",
                 "Sleeping Beauty is put to sleep. A coin is tossed. If heads, she's woken once. If tails, she's woken twice (with memory erased in between). When she wakes, what should be her degree of belief that the coin was heads?",
@@ -175,7 +298,7 @@
                     } while (newIndex === lastExperimentIndex);
                     
                     lastExperimentIndex = newIndex;
-                    experimentDisplay.textContent = thoughtExperiments[newIndex];
+                    experimentDisplay.innerHTML = thoughtExperiments[newIndex];
                     experimentDisplay.style.opacity = '1';
                 }, 1000); // Match CSS transition
             }
@@ -189,4 +312,3 @@
     </script>
 </body>
 </html>
-

@@ -1,0 +1,39 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <!--
+        og-image for cogit.im
+        Dimensions: 1200x630
+        Fonts: Lora, Inter
+        Palette: "Dusk & Vellum"
+    -->
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Inter:wght@600');
+            .bg { fill: #0A0E1B; }
+            .logo-text { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 600; }
+            .logo-cogit { fill: #a0a0a0; }
+            .logo-im { fill: #FF8A00; }
+            .main-text { font-family: 'Lora', serif; font-size: 64px; font-weight: 500; fill: #F8F7F4; text-anchor: middle; }
+            .url-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 600; fill: #FF8A00; text-anchor: middle; letter-spacing: 1px; }
+        </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="630" class="bg" />
+
+    <!-- Logo -->
+    <text x="60" y="80" class="logo-text">
+        <tspan class="logo-cogit">cogit</tspan><tspan class="logo-im">.im</tspan>
+    </text>
+
+    <!-- Main Content (wrapped text) -->
+    <text x="600" y="280" class="main-text">
+        <tspan x="600" dy="0">If a ship has all its parts</tspan>
+        <tspan x="600" dy="1.3em">replaced, is it still the</tspan>
+        <tspan x="600" dy="1.3em">same ship?</tspan>
+    </text>
+
+    <!-- URL at the bottom -->
+    <text x="600" y="570" class="url-text">
+        COGIT.IM
+    </text>
+</svg>
