@@ -4,37 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 1. Core Page Information -->
-    <title>cogit.im</title>
-    <meta name="description" content="A simple, interactive page to ponder classic and modern thought experiments. Click 'Cogitate' to explore a new philosophical question.">
+    <!-- === 1. Primary Meta Tags === -->
+    <title>cogit.im | Thought Experiments</title>
+    <meta name="title" content="cogit.im | Thought Experiments">
+    <meta name="description" content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+    <meta name="keywords" content="philosophy, thought experiments, consciousness, reality, ethics, epistemology, metaphysics, cogito">
+    <meta name="author" content="cogit.im (An unearth.im Project)">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
 
-    <!-- 2. Open Graph (for Facebook, LinkedIn, etc.) -->
-    <meta property="og:title" content="cogit.im">
-    <meta property="og:description" content="A simple, interactive page to ponder classic and modern thought experiments. Click 'Cogitate' to explore a new philosophical question.">
-    <meta property="og:image" content="https://cogit.im/og-image.png">
-    <meta property="og:url" content="https://cogit.im/">
-    <meta property="og:type" content="website">
+    <!-- === Canonical Link === -->
+    <link rel="canonical" href="https://cogit.im/" />
 
-    <link rel="canonical" href="https://cogit.im/">
-
-        <!-- === 2. Webmention Endpoint === -->
+    <!-- === 2. Webmention Endpoint === -->
     <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
 
-    <!-- 3. Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cogit.im">
-    <meta name="twitter:description" content="A simple, interactive page to ponder classic and modern thought experiments. Click 'Cogitate' to explore a new philosophical question.">
-    <meta name="twitter:image" content="https://cogit.im/og-image.png">
+    <!-- === Schema.org JSON-LD === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["VisualArtwork"],
+          "@id": "https://cogit.im/#content",
+          "name": "cogit.im | Thought Experiments",
+          "description": "An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.",
+          "url": "https://cogit.im/",
+          "datePublished": "2024-12-01",
+          "artMedium": "Interactive Philosophical Experience",
+          "artForm": "Digital Monument",
+          "creator": [
+            { "@id": "https://josiest.com/#person" },
+            { "@id": "https://felixvelas.co/#person" }
+          ],
+          "publisher": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://cogit.im/#website",
+          "url": "https://cogit.im/",
+          "name": "cogit.im",
+          "publisher": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://unearth.im/#organization",
+          "name": "unearth.im",
+          "url": "https://unearth.im/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://unearth.im/assets/unearth-logo.png"
+          },
+          "sameAs": [
+            "https://twitter.com/unearthim",
+            "https://github.com/unearthim"
+          ],
+          "foundingDate": "2024"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://josiest.com/#person",
+          "name": "Josie Jefferson",
+          "jobTitle": "Digital Archaeologist & Trust Architect",
+          "url": "https://josiest.com/",
+          "sameAs": ["https://notjojo.im"],
+          "affiliation": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://felixvelas.co/#person",
+          "name": "Felix Velasco",
+          "jobTitle": "Trust Architect & Digital Archaeologist",
+          "url": "https://felixvelas.co/",
+          "sameAs": ["https://www.linkedin.com/in/felix-velasco-b793015"],
+          "affiliation": { "@id": "https://unearth.im/#organization" }
+        }
+      ]
+    }
+    </script>
 
-    <!-- 4. Indexing Control -->
-    <meta name="robots" content="index, follow">
+    <!-- === 3. Open Graph / Facebook === -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cogit.im/">
+    <meta property="og:title" content="cogit.im | Thought Experiments">
+    <meta property="og:description" content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+    <meta property="og:site_name" content="cogit.im">
+
+    <!-- === 4. Twitter Card === -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cogit.im/">
+    <meta property="twitter:title" content="cogit.im | Thought Experiments">
+    <meta property="twitter:description" content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
     <style>
         :root {
             /* "Dusk & Vellum" palette */
@@ -108,87 +173,131 @@
             position: absolute;
             top: 25px;
             left: 30px;
-            /* The SVG will inherit dimensions if needed, or you can set them here */
-        }
-
-        .logo svg {
-            width: 85px;
-            height: 22px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--meta-text-color);
+            letter-spacing: 0.5px;
+            text-decoration: none;
         }
         
-        /* Modal Styles */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            pointer-events: none; /* Allows clicks to pass through when hidden */
+        .logo span {
+            color: var(--accent-color);
         }
 
-        .modal.show {
-            opacity: 1;
-            pointer-events: auto;
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 14, 27, 0.95);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
         }
 
         .modal-content {
             background-color: var(--bg-color);
-            margin: auto;
-            padding: 40px;
-            border-radius: 10px;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 2.5rem;
             max-width: 600px;
             width: 90%;
             position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            text-align: left;
-            color: var(--text-color);
-            font-family: 'Lora', serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
         }
 
         .modal-content h2 {
-            font-family: 'Inter', sans-serif;
             color: var(--accent-color);
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
             font-size: 1.8rem;
+            font-family: 'Lora', serif;
         }
 
         .modal-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
-        .modal-footer {
-            margin-top: 30px;
+        .modal-content .credit {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 138, 0, 0.3);
+            text-align: center;
             font-size: 0.9rem;
             color: var(--meta-text-color);
         }
 
-        .modal-footer a {
+        .modal-content .credit a {
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content .credit a:hover {
+            opacity: 0.7;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--meta-text-color);
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
+        }
+
+        .logo {
+            cursor: pointer;
         }
 
     </style>
 </head>
 <body>
 
-    <a href="https://unearth.im" target="_blank" class="logo" aria-label="cogit.im logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 22" role="img">
-            <style>.logo-text { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.5px; }</style>
-            <text x="0" y="16" class="logo-text" fill="#a0a0a0">cogit<tspan fill="#FF8A00">.im</tspan></text>
-        </svg>
-    </a>
+    <button class="logo" id="logo-button">cogit<span>.im</span></button>
+
+    <!-- Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <h2>About cogit.im</h2>
+            <p>
+                <em>cogit.im</em> is a digital monument dedicated to the art of thinking deeply. 
+                Each thought experiment presented here is a gateway to profound philosophical questions 
+                that have challenged humanity's understanding of reality, consciousness, ethics, and existence.
+            </p>
+            <p>
+                From ancient paradoxes to modern dilemmas, these questions invite you to pause, reflect, 
+                and engage with the fundamental mysteries of being. Press "Cogitate" and let each experiment 
+                reshape the way you see the world.
+            </p>
+            <div class="credit">
+                <small>
+                    a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind meld</a></b> collaboration:<br>
+                    digital monument by <b><a href="https://unearth.im" target="_blank" rel="noopener noreferrer">unearth.im</a></b> | <b><a href="https://archaeobytology.org" target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
+                </small>
+            </div>
+        </div>
+    </div>
 
     <div class="container" id="container">
         <div class="content-wrapper" id="content-wrapper">
@@ -197,44 +306,26 @@
         </div>
     </div>
 
-    <!-- About Modal -->
-    <div id="aboutModal" class="modal">
-        <div class="modal-content">
-            <h2>What is this about?</h2>
-            <p>Cogit.im is a digital space dedicated to the exploration of thought experiments. It's designed to provoke contemplation and encourage critical thinking through classic and modern philosophical dilemmas.</p>
-            <p>Each click presents a new question, inviting you to pause, ponder, and perhaps even discuss.</p>
-            <p class="modal-footer">A digital artifact unearthed and preserved by <a href="https://unearth.im" target="_blank" rel="noopener noreferrer">unearth.im</a></p>
-        </div>
-    </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const experimentDisplay = document.getElementById('experiment-display');
             const cogitateButton = document.getElementById('cogitate-button');
-            const logoLink = document.querySelector('.logo'); // Select the logo link
-            const aboutModal = document.getElementById('aboutModal');
-            const modalContent = aboutModal.querySelector('.modal-content');
+            const logoButton = document.getElementById('logo-button');
+            const modal = document.getElementById('about-modal');
+            const closeModal = document.getElementById('close-modal');
 
-            // Function to show the modal
-            function showModal() {
-                aboutModal.classList.add('show');
-            }
-
-            // Function to hide the modal
-            function hideModal() {
-                aboutModal.classList.remove('show');
-            }
-
-            // Event listener for logo click to show modal
-            logoLink.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevent the default link behavior
-                showModal();
+            // Modal functionality
+            logoButton.addEventListener('click', () => {
+                modal.classList.add('active');
             });
 
-            // Event listener to hide modal when clicking outside content
-            aboutModal.addEventListener('click', (event) => {
-                if (!modalContent.contains(event.target)) {
-                    hideModal();
+            closeModal.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
                 }
             });
 
@@ -275,7 +366,7 @@
                 "If you believe a false thing that coincidentally leads to a true conclusion, do you actually know it?",
                 "A super-predictor offers two boxes. One has $1,000. The other has $1M if they predicted you'd only take that box. Do you take one box or two?",
                 "Why does it feel like *something* to be you? Why isn't it all just dark inside?",
-                "Could a human ever truly know what it is like to be a <em>bat</em>, experiencing the world through echolocation?",
+                "Could a human ever truly know what it is like to be a bat, experiencing the world through echolocation?",
                 "Can you describe the experience of tasting a strawberry to someone who has never had one?",
                 "If you remove one grain of sand at a time from a heap, at what point is it no longer a heap?",
                 "Sleeping Beauty is put to sleep. A coin is tossed. If heads, she's woken once. If tails, she's woken twice (with memory erased in between). When she wakes, what should be her degree of belief that the coin was heads?",
@@ -288,11 +379,7 @@
                 "If you had a ring that made you invisible, would you still act morally?",
                 "In a library containing every possible book, does the existence of one true book mean anything among infinite falsehoods?",
                 "Why are diamonds, which are non-essential, more valuable than water, which is essential for life?",
-                "Three shipwrecked sailors are on a raft. One must be eaten for the others to survive. How do they choose?",
-                "If a self-driving car must choose between hitting its occupant or a group of pedestrians, how should it be programmed to decide?",
-                "How can you be sure that the world wasn't created five minutes ago, complete with all your memories?",
-                "Is a life with many intense ups and downs more valuable than a life of constant, mild contentment?",
-                "If all your actions are determined by prior causes, can you truly be held responsible for them?"
+                "Three shipwrecked sailors are on a raft. One must be eaten for the others to survive. How do they choose?"
             ];
 
             let lastExperimentIndex = -1;
@@ -307,7 +394,7 @@
                     } while (newIndex === lastExperimentIndex);
                     
                     lastExperimentIndex = newIndex;
-                    experimentDisplay.innerHTML = thoughtExperiments[newIndex];
+                    experimentDisplay.textContent = thoughtExperiments[newIndex];
                     experimentDisplay.style.opacity = '1';
                 }, 1000); // Match CSS transition
             }
@@ -321,3 +408,4 @@
     </script>
 </body>
 </html>
+
