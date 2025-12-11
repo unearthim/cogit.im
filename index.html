@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <!-- === 1. Primary Meta Tags === -->
     <title>cogit.im | Thought Experiments</title>
     <meta name="title" content="cogit.im | Thought Experiments">
-    <meta name="description" content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
-    <meta name="keywords" content="philosophy, thought experiments, consciousness, reality, ethics, epistemology, metaphysics, cogito">
+    <meta name="description"
+        content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+    <meta name="keywords"
+        content="philosophy, thought experiments, consciousness, reality, ethics, epistemology, metaphysics, cogito">
     <meta name="author" content="cogit.im (by unearth heritage foundry - archive & anvil - unearth.im)">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -51,7 +54,7 @@
           "@type": "Organization",
           "@id": "https://unearth.im/#organization",
           "name": "Unearth Heritage Foundry",
-"alternateName": ["Unearth Foundry", "Archive & Anvil"],
+"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
           "url": "https://unearth.im/",
           "logo": {
             "@type": "ImageObject",
@@ -89,28 +92,37 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cogit.im/">
     <meta property="og:title" content="cogit.im | Thought Experiments">
-    <meta property="og:description" content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+    <meta property="og:description"
+        content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
     <meta property="og:site_name" content="cogit.im">
 
     <!-- === 4. Twitter Card === -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://cogit.im/">
     <meta property="twitter:title" content="cogit.im | Thought Experiments">
-    <meta property="twitter:description" content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+    <meta property="twitter:description"
+        content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             /* "Dusk & Vellum" palette */
-            --bg-color: #0A0E1B; /* Deep Navy */
-            --text-color: #F8F7F4; /* Off-White / Vellum */
-            --accent-color: #FF8A00; /* Luminous Ember */
-            --meta-text-color: #a0a0a0; /* Softer Gray */
+            --bg-color: #0A0E1B;
+            /* Deep Navy */
+            --text-color: #F8F7F4;
+            /* Off-White / Vellum */
+            --accent-color: #FF8A00;
+            /* Luminous Ember */
+            --meta-text-color: #a0a0a0;
+            /* Softer Gray */
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
@@ -137,7 +149,7 @@
             max-width: 900px;
             width: 100%;
         }
-        
+
         #experiment-display {
             font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 500;
@@ -147,9 +159,10 @@
             align-items: center;
             justify-content: center;
             transition: opacity 1s ease-in-out;
-            opacity: 0; /* Start hidden */
+            opacity: 0;
+            /* Start hidden */
         }
-        
+
         #cogitate-button {
             font-family: 'Inter', sans-serif;
             font-size: 1.1rem;
@@ -184,7 +197,7 @@
             border: none;
             padding: 0;
         }
-        
+
         .logo span {
             color: var(--accent-color);
         }
@@ -272,9 +285,9 @@
         .logo {
             cursor: pointer;
         }
-
     </style>
 </head>
+
 <body>
 
     <button class="logo" id="logo-button">cogit<span>.im</span></button>
@@ -285,19 +298,22 @@
             <button class="close-modal" id="close-modal">&times;</button>
             <h2>About cogit.im</h2>
             <p>
-                <em>cogit.im</em> is a digital monument dedicated to the art of thinking deeply. 
-                Each thought experiment presented here is a gateway to profound philosophical questions 
+                <em>cogit.im</em> is a digital monument dedicated to the art of thinking deeply.
+                Each thought experiment presented here is a gateway to profound philosophical questions
                 that have challenged humanity's understanding of reality, consciousness, ethics, and existence.
             </p>
             <p>
-                From ancient paradoxes to modern dilemmas, these questions invite you to pause, reflect, 
-                and engage with the fundamental mysteries of being. Press "Cogitate" and let each experiment 
+                From ancient paradoxes to modern dilemmas, these questions invite you to pause, reflect,
+                and engage with the fundamental mysteries of being. Press "Cogitate" and let each experiment
                 reshape the way you see the world.
             </p>
             <div class="credit">
                 <small>
-                    a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind meld</a></b> collaboration:<br>
-                    digital monument by <b><a href="https://unearth.im" target="_blank" rel="noopener noreferrer">unearth.im</a></b> | <b><a href="https://archaeobytology.org" target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
+                    a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind
+                            meld</a></b> collaboration:<br>
+                    digital monument by <b><a href="https://unearth.im" target="_blank"
+                            rel="noopener noreferrer">unearth.im</a></b> | <b><a href="https://archaeobytology.org"
+                            target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
                 </small>
             </div>
         </div>
@@ -407,13 +423,13 @@
 
             function displayNewExperiment() {
                 experimentDisplay.style.opacity = '0';
-                
+
                 setTimeout(() => {
                     let newIndex;
                     do {
                         newIndex = Math.floor(Math.random() * thoughtExperiments.length);
                     } while (newIndex === lastExperimentIndex);
-                    
+
                     lastExperimentIndex = newIndex;
                     experimentDisplay.textContent = thoughtExperiments[newIndex];
                     experimentDisplay.style.opacity = '1';
@@ -428,5 +444,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>
