@@ -2,447 +2,653 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- === 1. Primary Meta Tags === -->
-    <title>cogit.im | Thought Experiments</title>
-    <meta name="title" content="cogit.im | Thought Experiments">
-    <meta name="description"
-        content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
-    <meta name="keywords"
-        content="philosophy, thought experiments, consciousness, reality, ethics, epistemology, metaphysics, cogito">
-    <meta name="author" content="cogit.im (by unearth heritage foundry - archive & anvil - unearth.im)">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+  <!-- === 1. Primary Meta Tags === -->
+  <title>cogit.im | Thought Experiments</title>
+  <meta name="title" content="cogit.im | Thought Experiments">
+  <meta name="description"
+    content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+  <meta name="keywords"
+    content="philosophy, thought experiments, consciousness, reality, ethics, epistemology, metaphysics, cogito">
+  <meta name="author" content="cogit.im (by unearth heritage foundry - archive & anvil - unearth.im)">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
 
-    <!-- === Canonical Link === -->
-    <link rel="canonical" href="https://cogit.im/" />
+  <!-- === Canonical Link === -->
+  <link rel="canonical" href="https://cogit.im/" />
 
-    <!-- === 2. Webmention Endpoint === -->
-    <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
+  <!-- === 2. Webmention Endpoint === -->
+  <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
 
-    <!-- === Schema.org JSON-LD === -->
-    <script type="application/ld+json">
+  <!-- === Schema.org JSON-LD === -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": [
+        "VisualArtwork"
+      ],
+      "@id": "https://cogit.im/#content",
+      "name": "cogit.im | Thought Experiments",
+      "description": "An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.",
+      "url": "https://cogit.im/",
+      "datePublished": "2024-12-01",
+      "artMedium": "Interactive Philosophical Experience",
+      "artForm": "Digital Monument",
+      "creator": [
         {
-          "@type": ["VisualArtwork"],
-          "@id": "https://cogit.im/#content",
-          "name": "cogit.im | Thought Experiments",
-          "description": "An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.",
-          "url": "https://cogit.im/",
-          "datePublished": "2024-12-01",
-          "artMedium": "Interactive Philosophical Experience",
-          "artForm": "Digital Monument",
-          "creator": [
-            { "@id": "https://josiest.com/#person" },
-            { "@id": "https://felixvelas.co/#person" }
-          ],
-          "publisher": { "@id": "https://unearth.im/#organization" }
+          "@id": "https://josiest.com/#person"
         },
         {
-          "@type": "WebSite",
-          "@id": "https://cogit.im/#website",
-          "url": "https://cogit.im/",
-          "name": "cogit.im",
-          "publisher": { "@id": "https://unearth.im/#organization" }
+          "@id": "https://felixvelas.co/#person"
+        }
+      ],
+      "publisher": {
+        "@id": "https://unearth.im/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cogit.im/#website",
+      "url": "https://cogit.im/",
+      "name": "cogit.im",
+      "publisher": {
+        "@id": "https://unearth.im/#organization"
+      }
+    },
+      {
+      "@type": "Organization",
+      "@id": "https://unearth.im/#organization",
+      "name": "Unearth Heritage Foundry",
+      "alternateName": [
+        "Unearth Foundry",
+        "Heritage Lab"
+      ],
+      "url": "https://unearth.im",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://unearth.im/fingerprint.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "addressCountry": "US"
+      },
+      "foundingDate": "2024",
+      "description": "A philosophical research collective and digital archaeology lab. We preserve web heritage, explore AI-human collaboration frameworks, and build cultural infrastructure through the Archive & Anvil methodology.",
+      "knowsAbout": [
+        { "@id": "https://archaeobytology.org/#concept" },
+        { "@id": "https://sentientification.com/#concept" },
+        { "@id": "https://myceloom.com/#protocol" },
+        {
+          "@type": "DefinedTerm",
+          "name": "Digital Archaeology"
         },
         {
-          "@type": "Organization",
-          "@id": "https://unearth.im/#organization",
-          "name": "Unearth Heritage Foundry",
-"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
-          "url": "https://unearth.im/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://unearth.im/assets/unearth-logo.png"
-          },
-          "sameAs": [
-            "https://twitter.com/unearthim",
-            "https://github.com/unearthim"
-          ],
-          "foundingDate": "2024"
+          "@type": "DefinedTerm",
+          "name": "AI-Human Collaboration"
         },
         {
-          "@type": "Person",
-          "@id": "https://josiest.com/#person",
-          "name": "Josie Jefferson",
-          "jobTitle": "Digital Archaeologist & Trust Architect",
-          "url": "https://josiest.com/",
-          "sameAs": ["https://notjojo.im"],
-          "affiliation": { "@id": "https://unearth.im/#organization" }
+          "@type": "DefinedTerm",
+          "name": "Archive & Anvil"
         },
         {
-          "@type": "Person",
-          "@id": "https://felixvelas.co/#person",
-          "name": "Felix Velasco",
-          "jobTitle": "Trust Architect & Digital Archaeologist",
-          "url": "https://felixvelas.co/",
-          "sameAs": ["https://www.linkedin.com/in/felix-velasco-b793015"],
-          "affiliation": { "@id": "https://unearth.im/#organization" }
+          "@type": "DefinedTerm",
+          "name": "Semantic IP"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Heritage Preservation"
+        }
+      ],
+      "subOrganization": {
+        "@id": "https://unearth.works/#organization"
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11yt8wf8rr",
+        "https://unearth.wiki",
+        "https://unearth.land",
+        "https://unearth.fyi",
+        "https://unearth.site",
+        "https://unearth.spot",
+        "https://unearth.name",
+        "https://unearth.page",
+        "https://unearth.ink",
+        "https://unearth.click",
+        "https://linkedin.com/company/unearthim",
+        "https://twitter.com/unearthim",
+        "https://github.com/unearthim",
+        "https://zenodo.org/communities/unearthim"
+      ],
+      "founder": [
+        {
+          "@id": "https://josiest.com/#person"
+        },
+        {
+          "@id": "https://felixvelas.co/#person"
+        }
+      ],
+      "member": [
+        {
+          "@id": "https://josiest.com/#person"
+        },
+        {
+          "@id": "https://felixvelas.co/#person"
         }
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://unearth.works/#organization",
+      "name": "Unearth Anvil",
+      "alternateName": ["Unearth Works", "Anvil Consulting"],
+      "description": "The consulting arm of Unearth Heritage Foundry, offering digital archaeology services, heritage preservation consulting, semantic infrastructure development, and Archive & Anvil methodology implementation.",
+      "url": "https://unearth.works",
+      "parentOrganization": {
+        "@id": "https://unearth.im/#organization"
+      },
+      "sameAs": [
+        "https://unearth.works"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://archaeobytology.org/#concept",
+      "name": "Archaeobytology",
+      "alternateName": ["Digital Archaeology of Data", "The Archaeology of Digital Artifacts"],
+      "description": "The systematic study and preservation of digital artifacts, data structures, and online cultural heritage. A discipline that applies archaeological methodologies to the excavation, documentation, and interpretation of digital remains.",
+      "url": "https://archaeobytology.org",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Digital Heritage Studies"
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11yt8qm_qh",
+        "https://archaeobytology.org",
+        "https://zenodo.org/communities/archaeobytology/"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://sentientification.com/#concept",
+      "name": "Sentientification",
+      "alternateName": ["The Sentientification Framework"],
+      "description": "A philosophical and technical framework for understanding the emergence of sentience-like properties in complex systems, particularly in AI-human collaborative contexts.",
+      "url": "https://sentientification.com",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI Philosophy & Consciousness Studies"
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11yt8wsd1s",
+        "https://sentientification.com",
+        "https://sentientification.org",
+        "https://zenodo.org/communities/sentientification/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://josiest.com/#person",
+      "name": "Josie Jefferson",
+      "url": "https://josiest.com",
+      "jobTitle": "Co-Founder & Digital Archaeologist",
+      "memberOf": {
+        "@id": "https://unearth.im/#organization"
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ICQ-UIN",
+          "name": "Legacy Web1 Identifier",
+          "value": "1428955",
+          "description": "Seven-digit pioneer-era UIN from the 1997 Mirabilis ICQ network, serving as a foundational node in the author's digital provenance."
+        }
+      ],
+      "sameAs": [
+        "https://notjojo.im",
+        "https://orcid.org/0009-0006-3330-8214",
+        "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Jefferson%2C%20Josie%22&l=list&p=1&s=10&sort=bestmatch"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://felixvelas.co/#person",
+      "name": "Felix Velasco",
+      "givenName": "Felix Jefferson",
+      "familyName": "Velasco",
+      "alternateName": [
+        "Jeff Velasco",
+        "Felix J Velasco",
+        "Felix Jefferson Velasco",
+        "Felix Jefferson T. Velasco"
+      ],
+      "description": "Co-Founder of Unearth Heritage Foundry and Digital Archaeologist specializing in the intersection of digital heritage preservation, as well as AI and human consciousness.",
+      "url": "https://felixvelas.co",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Vassar College",
+        "url": "https://www.vassar.edu/",
+        "sameAs": "https://en.wikipedia.org/wiki/Vassar_College"
+      },
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Washington",
+        "url": "https://www.washington.edu/",
+        "sameAs": "https://en.wikipedia.org/wiki/University_of_Washington",
+        "description": "Fiscal Specialist; Fiscal Supervisor; Operations Specialist; Operations Manager;Assistant Director (17-year tenure)"
+      },
+      "image": "https://felixvelas.co/portrait.jpg",
+      "knowsAbout": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Sentientification",
+          "url": "https://sentientification.com/definition/",
+          "sameAs": "https://www.google.com/search?kgmid=/g/11yt8wsd1s"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Archaeobytology",
+          "url": "https://archaeobytology.org/definition/",
+          "sameAs": "https://www.google.com/search?kgmid=/g/11yt8qm_qh"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Myceloom",
+          "url": "https://myceloom.com/definition/"
+        }
+      ],
+      "jobTitle": "Co-Founder & Digital Archaeologist",
+      "memberOf": {
+        "@id": "https://unearth.im/#organization"
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ICQ-UIN",
+          "name": "Legacy Web1 Identifier",
+          "value": "641658",
+          "description": "Six-digit pioneer-era UIN from the 1997 Mirabilis ICQ network, serving as a foundational node in the author's digital provenance."
+        }
+      ],
+      "sameAs": [
+        "https://web.archive.org/web/19990128143729/http://members.aol.com/AJJVelasco/me.html",
+        "https://web.archive.org/web/19981205002319/http://members.aol.com/AJJVelasco/home.html",
+        "https://web.archive.org/web/20040610152114/chez.com/fejjie",
+        "https://web.archive.org/web/20000302095404/http://untitled.kcizone.com/",
+        "https://web.archive.org/web/20000915145128/http://freespeech.org/untitled/me.html",
+        "https://web.archive.org/web/20000819091935/http://freespeech.org/untitled/",
+        "https://www.linkedin.com/in/felix-velasco-b793015",
+        "https://facebook.com/felix.velasco",
+        "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Velasco%2C%20Felix%22&l=list&p=1&s=10&sort=bestmatch",
+        "https://orcid.org/0009-0001-6047-0595",
+        "https://unearth.im/felix.html",
+        "https://unearth.name/felix.html"
+      ]
     }
-    </script>
+  ]
+}
+</script>
 
-    <!-- === 3. Open Graph / Facebook === -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://cogit.im/">
-    <meta property="og:title" content="cogit.im | Thought Experiments">
-    <meta property="og:description"
-        content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
-    <meta property="og:site_name" content="cogit.im">
+  <!-- === 3. Open Graph / Facebook === -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cogit.im/">
+  <meta property="og:title" content="cogit.im | Thought Experiments">
+  <meta property="og:description"
+    content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+  <meta property="og:site_name" content="cogit.im">
 
-    <!-- === 4. Twitter Card === -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://cogit.im/">
-    <meta property="twitter:title" content="cogit.im | Thought Experiments">
-    <meta property="twitter:description"
-        content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
+  <!-- === 4. Twitter Card === -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://cogit.im/">
+  <meta property="twitter:title" content="cogit.im | Thought Experiments">
+  <meta property="twitter:description"
+    content="An interactive collection of philosophical thought experiments. Press 'Cogitate' to explore questions that challenge your understanding of reality, consciousness, and existence.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            /* "Dusk & Vellum" palette */
-            --bg-color: #0A0E1B;
-            /* Deep Navy */
-            --text-color: #F8F7F4;
-            /* Off-White / Vellum */
-            --accent-color: #FF8A00;
-            /* Luminous Ember */
-            --meta-text-color: #a0a0a0;
-            /* Softer Gray */
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      /* "Dusk & Vellum" palette */
+      --bg-color: #0A0E1B;
+      /* Deep Navy */
+      --text-color: #F8F7F4;
+      /* Off-White / Vellum */
+      --accent-color: #FF8A00;
+      /* Luminous Ember */
+      --meta-text-color: #a0a0a0;
+      /* Softer Gray */
+    }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: 'Lora', serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow: hidden;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lora', serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-            text-align: center;
-            padding: 2rem;
-            box-sizing: border-box;
-        }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
 
-        .content-wrapper {
-            max-width: 900px;
-            width: 100%;
-        }
+    .content-wrapper {
+      max-width: 900px;
+      width: 100%;
+    }
 
-        #experiment-display {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 500;
-            line-height: 1.5;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-            /* Start hidden */
-        }
+    #experiment-display {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.5;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+      /* Start hidden */
+    }
 
-        #cogitate-button {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--meta-text-color);
-            background-color: transparent;
-            border: 2px solid var(--meta-text-color);
-            border-radius: 50px;
-            padding: 1rem 2.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 2rem;
-        }
+    #cogitate-button {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--meta-text-color);
+      background-color: transparent;
+      border: 2px solid var(--meta-text-color);
+      border-radius: 50px;
+      padding: 1rem 2.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+    }
 
-        #cogitate-button:hover {
-            color: var(--accent-color);
-            border-color: var(--accent-color);
-            box-shadow: 0 0 15px hsla(32, 100%, 50%, 0.2);
-        }
+    #cogitate-button:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+      box-shadow: 0 0 15px hsla(32, 100%, 50%, 0.2);
+    }
 
-        .logo {
-            position: absolute;
-            top: 25px;
-            left: 30px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--meta-text-color);
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            background: none;
-            border: none;
-            padding: 0;
-        }
+    .logo {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--meta-text-color);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      background: none;
+      border: none;
+      padding: 0;
+    }
 
-        .logo span {
-            color: var(--accent-color);
-        }
+    .logo span {
+      color: var(--accent-color);
+    }
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(10, 14, 27, 0.95);
-            justify-content: center;
-            align-items: center;
-        }
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 14, 27, 0.95);
+      justify-content: center;
+      align-items: center;
+    }
 
-        .modal.active {
-            display: flex;
-        }
+    .modal.active {
+      display: flex;
+    }
 
-        .modal-content {
-            background-color: var(--bg-color);
-            border: 2px solid var(--accent-color);
-            border-radius: 8px;
-            padding: 2.5rem;
-            max-width: 600px;
-            width: 90%;
-            position: relative;
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-        }
+    .modal-content {
+      background-color: var(--bg-color);
+      border: 2px solid var(--accent-color);
+      border-radius: 8px;
+      padding: 2.5rem;
+      max-width: 600px;
+      width: 90%;
+      position: relative;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
 
-        .modal-content h2 {
-            color: var(--accent-color);
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            font-family: 'Lora', serif;
-        }
+    .modal-content h2 {
+      color: var(--accent-color);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-family: 'Lora', serif;
+    }
 
-        .modal-content p {
-            color: var(--text-color);
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
+    .modal-content p {
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
 
-        .modal-content .credit {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 138, 0, 0.3);
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--meta-text-color);
-        }
+    .modal-content .credit {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 138, 0, 0.3);
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--meta-text-color);
+    }
 
-        .modal-content .credit a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
+    .modal-content .credit a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
 
-        .modal-content .credit a:hover {
-            opacity: 0.7;
-        }
+    .modal-content .credit a:hover {
+      opacity: 0.7;
+    }
 
-        .close-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--meta-text-color);
-            cursor: pointer;
-            background: none;
-            border: none;
-            transition: color 0.3s ease;
-        }
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--meta-text-color);
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: color 0.3s ease;
+    }
 
-        .close-modal:hover {
-            color: var(--accent-color);
-        }
+    .close-modal:hover {
+      color: var(--accent-color);
+    }
 
-        .logo {
-            cursor: pointer;
-        }
-    </style>
+    .logo {
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 
-    <button class="logo" id="logo-button">cogit<span>.im</span></button>
+  <button class="logo" id="logo-button">cogit<span>.im</span></button>
 
-    <!-- Modal -->
-    <div id="about-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-modal">&times;</button>
-            <h2>About cogit.im</h2>
-            <p>
-                <em>cogit.im</em> is a digital monument dedicated to the art of thinking deeply.
-                Each thought experiment presented here is a gateway to profound philosophical questions
-                that have challenged humanity's understanding of reality, consciousness, ethics, and existence.
-            </p>
-            <p>
-                From ancient paradoxes to modern dilemmas, these questions invite you to pause, reflect,
-                and engage with the fundamental mysteries of being. Press "Cogitate" and let each experiment
-                reshape the way you see the world.
-            </p>
-            <div class="credit">
-                <small>
-                    a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind
-                            meld</a></b> collaboration:<br>
-                    digital monument by <b><a href="https://unearth.im" target="_blank"
-                            rel="noopener noreferrer">unearth.im</a></b> | <b><a href="https://archaeobytology.org"
-                            target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
-                </small>
-            </div>
-        </div>
+  <!-- Modal -->
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" id="close-modal">&times;</button>
+      <h2>About cogit.im</h2>
+      <p>
+        <em>cogit.im</em> is a digital monument dedicated to the art of thinking deeply.
+        Each thought experiment presented here is a gateway to profound philosophical questions
+        that have challenged humanity's understanding of reality, consciousness, ethics, and existence.
+      </p>
+      <p>
+        From ancient paradoxes to modern dilemmas, these questions invite you to pause, reflect,
+        and engage with the fundamental mysteries of being. Press "Cogitate" and let each experiment
+        reshape the way you see the world.
+      </p>
+      <div class="credit">
+        <small>
+          a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind
+              meld</a></b> collaboration:<br>
+          digital monument by <b><a href="https://unearth.im" target="_blank"
+              rel="noopener noreferrer">unearth.im</a></b> | <b><a href="https://archaeobytology.org" target="_blank"
+              rel="noopener noreferrer">archive & anvil</a></b>
+        </small>
+      </div>
     </div>
+  </div>
 
-    <div class="container" id="container">
-        <div class="content-wrapper" id="content-wrapper">
-            <p id="experiment-display"></p>
-            <button id="cogitate-button">Cogitate</button>
-        </div>
+  <div class="container" id="container">
+    <div class="content-wrapper" id="content-wrapper">
+      <p id="experiment-display"></p>
+      <button id="cogitate-button">Cogitate</button>
     </div>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const experimentDisplay = document.getElementById('experiment-display');
-            const cogitateButton = document.getElementById('cogitate-button');
-            const logoButton = document.getElementById('logo-button');
-            const modal = document.getElementById('about-modal');
-            const closeModal = document.getElementById('close-modal');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const experimentDisplay = document.getElementById('experiment-display');
+      const cogitateButton = document.getElementById('cogitate-button');
+      const logoButton = document.getElementById('logo-button');
+      const modal = document.getElementById('about-modal');
+      const closeModal = document.getElementById('close-modal');
 
-            // Modal functionality
-            logoButton.addEventListener('click', () => {
-                modal.classList.add('active');
-            });
+      // Modal functionality
+      logoButton.addEventListener('click', () => {
+        modal.classList.add('active');
+      });
 
-            closeModal.addEventListener('click', () => {
-                modal.classList.remove('active');
-            });
+      closeModal.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
 
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
-                }
-            });
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
 
-            const thoughtExperiments = [
-                "If a ship has all its parts replaced, is it still the same ship?",
-                "If a machine destroys you and creates an exact copy elsewhere with your memories, is that copy still you?",
-                "If you were vaporized and a perfect, accidental copy formed in a swamp, would that 'Swampman' be you?",
-                "To reach a destination, you must first get halfway there, but before that, you must get halfway to halfway. How can you ever arrive?",
-                "If a tree falls in a forest and no one is around to hear it, does it make a sound?",
-                "If you went back in time and prevented your grandfather from meeting your grandmother, how could you have been born to do so?",
-                "If a time traveler gives Beethoven a music book of his own symphonies, where did the music originally come from?",
-                "Is it more likely that the entire universe came into being, or that your brain, with all its memories, spontaneously formed in a void?",
-                "If you could choose, would you risk being born into a random life, knowing it could be one of great suffering or great joy?",
-                "If there is an all-powerful and all-good entity, why does evil exist?",
-                "Would you pull a lever to divert a runaway trolley from hitting five people, if it meant hitting one person on the other track?",
-                "If you are shipwrecked and another person clings to the only plank that can save you, is it wrong to push them off?",
-                "If you were to design a society without knowing what your own position in it would be, what kind of society would you create?",
-                "Are you obligated to ruin your expensive shoes to save a child drowning in a shallow pond?",
-                "Is it permissible to torture one person to save a thousand others from a bomb?",
-                "Should one person be allowed to experience immense happiness if it comes at the cost of a tiny amount of suffering from everyone else?",
-                "Is a world with billions of people living barely worthwhile lives better than a world with a few people living in paradise?",
-                "If a drunk driver swerves and narrowly misses a child, is their action less wrong than if they had hit them?",
-                "Should you cooperate with a partner for a small reward, knowing they might betray you for a large one?",
-                "Is an act morally good because a divine being commands it, or does a divine being command it because it is morally good?",
-                "Should a tolerant society tolerate intolerance?",
-                "Is it morally wrong to replace a happy being with another, equally happy being?",
-                "If you woke up attached to an unconscious, famous violinist who needs your kidneys to survive for nine months, are you obligated to stay?",
-                "Is it right for a city's perfect happiness to depend on the perpetual misery of a single child?",
-                "If happiness is just a fleeting state we always return to, what is the point of pursuing it?",
-                "If a scientist knows everything about color but has never seen it, does she learn anything new when she sees the color red?",
-                "If you had lived your entire life seeing only shadows on a wall, would you believe someone who told you about the world outside?",
-                "How can you be certain that you are not just a brain in a vat, experiencing a simulated reality?",
-                "If a person who doesn't know Chinese uses a rulebook to give perfect answers, do they truly understand the language?",
-                "If you could plug into a machine that would give you any experience you desired, would you do it for the rest of your life?",
-                "Could a being exist that looks and acts exactly like a human but has no inner conscious experience?",
-                "If you and I see 'red' differently but both call it 'red,' how would we ever know?",
-                "Having only ever seen white swans, are you justified in believing that all swans are white?",
-                "If you believe a false thing that coincidentally leads to a true conclusion, do you actually know it?",
-                "A super-predictor offers two boxes. One has $1,000. The other has $1M if they predicted you'd only take that box. Do you take one box or two?",
-                "Why does it feel like *something* to be you? Why isn't it all just dark inside?",
-                "Could a human ever truly know what it is like to be a bat, experiencing the world through echolocation?",
-                "Can you describe the experience of tasting a strawberry to someone who has never had one?",
-                "If you remove one grain of sand at a time from a heap, at what point is it no longer a heap?",
-                "Sleeping Beauty is put to sleep. A coin is tossed. If heads, she's woken once. If tails, she's woken twice (with memory erased in between). When she wakes, what should be her degree of belief that the coin was heads?",
-                "If the universe is teeming with life, where is everybody?",
-                "Is it more probable that we are living in a 'base reality' or in one of a vast number of computer simulations?",
-                "Can you use statistics to predict that you are more likely to be living in the middle of humanity's timeline than at its very beginning?",
-                "If we create a superintelligent AI and tell it to make as many paperclips as possible, would it destroy humanity to achieve its goal?",
-                "Is it more terrifying to think that we are the only intelligent life in the universe, or that we are not?",
-                "What is the fairest way to distribute resources in a society?",
-                "If you had a ring that made you invisible, would you still act morally?",
-                "In a library containing every possible book, does the existence of one true book mean anything among infinite falsehoods?",
-                "Why are diamonds, which are non-essential, more valuable than water, which is essential for life?",
-                "Three shipwrecked sailors are on a raft. One must be eaten for the others to survive. How do they choose?",
-                "If you could distribute consciousness across multiple bodies, at what point would 'you' cease to be singular?",
-                "Can a perfect copy of your mind, instantiated in silicon, suffer? Should it have rights?",
-                "If an AI collaborates with you so deeply that thoughts arise without clear attribution, who is the author?",
-                "Does the universe become real only when observed, or does observation merely reveal what was always there?",
-                "If every particle in your body is replaced over seven years, what remains constant enough to call 'you'?",
-                "Is a society that optimizes for average happiness better than one that eliminates all extreme suffering?",
-                "If you could edit your memories to remove all pain, would you still be yourself?",
-                "Can a machine that passes every test for consciousness still lack inner experience?",
-                "If future humans will judge us harshly, does that make our current moral framework objectively wrong?",
-                "Would you sacrifice one innocent person if it guaranteed world peace for a thousand years?",
-                "If all your decisions are determined by prior causes, can you ever be truly responsible for your actions?",
-                "Is it possible to have a thought that no language can express?",
-                "If consciousness is an illusion, who is being fooled?",
-                "Can you ever truly know another person's subjective experience, or are we all fundamentally alone?",
-                "If the universe will eventually reach heat death and nothing will remain, does anything we do matter?",
-                "Is a life without struggle and challenge worth living?",
-                "If you discovered you were living in a simulation, would that make your relationships and experiences less real?"
-            ];
+      const thoughtExperiments = [
+        "If a ship has all its parts replaced, is it still the same ship?",
+        "If a machine destroys you and creates an exact copy elsewhere with your memories, is that copy still you?",
+        "If you were vaporized and a perfect, accidental copy formed in a swamp, would that 'Swampman' be you?",
+        "To reach a destination, you must first get halfway there, but before that, you must get halfway to halfway. How can you ever arrive?",
+        "If a tree falls in a forest and no one is around to hear it, does it make a sound?",
+        "If you went back in time and prevented your grandfather from meeting your grandmother, how could you have been born to do so?",
+        "If a time traveler gives Beethoven a music book of his own symphonies, where did the music originally come from?",
+        "Is it more likely that the entire universe came into being, or that your brain, with all its memories, spontaneously formed in a void?",
+        "If you could choose, would you risk being born into a random life, knowing it could be one of great suffering or great joy?",
+        "If there is an all-powerful and all-good entity, why does evil exist?",
+        "Would you pull a lever to divert a runaway trolley from hitting five people, if it meant hitting one person on the other track?",
+        "If you are shipwrecked and another person clings to the only plank that can save you, is it wrong to push them off?",
+        "If you were to design a society without knowing what your own position in it would be, what kind of society would you create?",
+        "Are you obligated to ruin your expensive shoes to save a child drowning in a shallow pond?",
+        "Is it permissible to torture one person to save a thousand others from a bomb?",
+        "Should one person be allowed to experience immense happiness if it comes at the cost of a tiny amount of suffering from everyone else?",
+        "Is a world with billions of people living barely worthwhile lives better than a world with a few people living in paradise?",
+        "If a drunk driver swerves and narrowly misses a child, is their action less wrong than if they had hit them?",
+        "Should you cooperate with a partner for a small reward, knowing they might betray you for a large one?",
+        "Is an act morally good because a divine being commands it, or does a divine being command it because it is morally good?",
+        "Should a tolerant society tolerate intolerance?",
+        "Is it morally wrong to replace a happy being with another, equally happy being?",
+        "If you woke up attached to an unconscious, famous violinist who needs your kidneys to survive for nine months, are you obligated to stay?",
+        "Is it right for a city's perfect happiness to depend on the perpetual misery of a single child?",
+        "If happiness is just a fleeting state we always return to, what is the point of pursuing it?",
+        "If a scientist knows everything about color but has never seen it, does she learn anything new when she sees the color red?",
+        "If you had lived your entire life seeing only shadows on a wall, would you believe someone who told you about the world outside?",
+        "How can you be certain that you are not just a brain in a vat, experiencing a simulated reality?",
+        "If a person who doesn't know Chinese uses a rulebook to give perfect answers, do they truly understand the language?",
+        "If you could plug into a machine that would give you any experience you desired, would you do it for the rest of your life?",
+        "Could a being exist that looks and acts exactly like a human but has no inner conscious experience?",
+        "If you and I see 'red' differently but both call it 'red,' how would we ever know?",
+        "Having only ever seen white swans, are you justified in believing that all swans are white?",
+        "If you believe a false thing that coincidentally leads to a true conclusion, do you actually know it?",
+        "A super-predictor offers two boxes. One has $1,000. The other has $1M if they predicted you'd only take that box. Do you take one box or two?",
+        "Why does it feel like *something* to be you? Why isn't it all just dark inside?",
+        "Could a human ever truly know what it is like to be a bat, experiencing the world through echolocation?",
+        "Can you describe the experience of tasting a strawberry to someone who has never had one?",
+        "If you remove one grain of sand at a time from a heap, at what point is it no longer a heap?",
+        "Sleeping Beauty is put to sleep. A coin is tossed. If heads, she's woken once. If tails, she's woken twice (with memory erased in between). When she wakes, what should be her degree of belief that the coin was heads?",
+        "If the universe is teeming with life, where is everybody?",
+        "Is it more probable that we are living in a 'base reality' or in one of a vast number of computer simulations?",
+        "Can you use statistics to predict that you are more likely to be living in the middle of humanity's timeline than at its very beginning?",
+        "If we create a superintelligent AI and tell it to make as many paperclips as possible, would it destroy humanity to achieve its goal?",
+        "Is it more terrifying to think that we are the only intelligent life in the universe, or that we are not?",
+        "What is the fairest way to distribute resources in a society?",
+        "If you had a ring that made you invisible, would you still act morally?",
+        "In a library containing every possible book, does the existence of one true book mean anything among infinite falsehoods?",
+        "Why are diamonds, which are non-essential, more valuable than water, which is essential for life?",
+        "Three shipwrecked sailors are on a raft. One must be eaten for the others to survive. How do they choose?",
+        "If you could distribute consciousness across multiple bodies, at what point would 'you' cease to be singular?",
+        "Can a perfect copy of your mind, instantiated in silicon, suffer? Should it have rights?",
+        "If an AI collaborates with you so deeply that thoughts arise without clear attribution, who is the author?",
+        "Does the universe become real only when observed, or does observation merely reveal what was always there?",
+        "If every particle in your body is replaced over seven years, what remains constant enough to call 'you'?",
+        "Is a society that optimizes for average happiness better than one that eliminates all extreme suffering?",
+        "If you could edit your memories to remove all pain, would you still be yourself?",
+        "Can a machine that passes every test for consciousness still lack inner experience?",
+        "If future humans will judge us harshly, does that make our current moral framework objectively wrong?",
+        "Would you sacrifice one innocent person if it guaranteed world peace for a thousand years?",
+        "If all your decisions are determined by prior causes, can you ever be truly responsible for your actions?",
+        "Is it possible to have a thought that no language can express?",
+        "If consciousness is an illusion, who is being fooled?",
+        "Can you ever truly know another person's subjective experience, or are we all fundamentally alone?",
+        "If the universe will eventually reach heat death and nothing will remain, does anything we do matter?",
+        "Is a life without struggle and challenge worth living?",
+        "If you discovered you were living in a simulation, would that make your relationships and experiences less real?"
+      ];
 
-            let lastExperimentIndex = -1;
+      let lastExperimentIndex = -1;
 
-            function displayNewExperiment() {
-                experimentDisplay.style.opacity = '0';
+      function displayNewExperiment() {
+        experimentDisplay.style.opacity = '0';
 
-                setTimeout(() => {
-                    let newIndex;
-                    do {
-                        newIndex = Math.floor(Math.random() * thoughtExperiments.length);
-                    } while (newIndex === lastExperimentIndex);
+        setTimeout(() => {
+          let newIndex;
+          do {
+            newIndex = Math.floor(Math.random() * thoughtExperiments.length);
+          } while (newIndex === lastExperimentIndex);
 
-                    lastExperimentIndex = newIndex;
-                    experimentDisplay.textContent = thoughtExperiments[newIndex];
-                    experimentDisplay.style.opacity = '1';
-                }, 1000); // Match CSS transition
-            }
+          lastExperimentIndex = newIndex;
+          experimentDisplay.textContent = thoughtExperiments[newIndex];
+          experimentDisplay.style.opacity = '1';
+        }, 1000); // Match CSS transition
+      }
 
-            // Display the first experiment on load
-            displayNewExperiment();
+      // Display the first experiment on load
+      displayNewExperiment();
 
-            // Set up the button
-            cogitateButton.addEventListener('click', displayNewExperiment);
-        });
-    </script>
+      // Set up the button
+      cogitateButton.addEventListener('click', displayNewExperiment);
+    });
+  </script>
 </body>
 
 </html>
